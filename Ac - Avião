@@ -1,0 +1,52 @@
+let avião = {
+    capacidade: 300,
+    modelo: "Boeing 757",
+    peso: 64.590, 
+    velocidade: 0,
+    velocidadeMaxima: 982, 
+    ligado: false,
+
+    ligar: function(){
+        this.ligado = true 
+        console.log("Avião ligando")
+        console.log("Velocidade Atual:" + this.velocidade)
+    },
+
+    desligar: function (){
+        this.ligado = false
+        console.log("Avião desligando")
+    },
+
+    acelerar: function(){
+        if(this.ligado = this. velocidade < this.velocidadeMaxima){
+            this.velocidade += 10
+            console.log("Acelerando")
+        }
+        else{
+            console.log("O avião atingiu a velocidade maxima")
+        }
+        console.log("Velocidade atual: "+ this.velocidade)
+    },
+
+    frear: function (){
+        if (this.velocidade > 0) {
+            this.velocidade -= 10
+            console.log("Freando")
+    }
+},
+
+decolar: function(){
+    if (this.velocidade >= 200 && this.ligado){
+        console.log("Decolando")
+    }
+},
+
+pousar: function (){
+    if(this.velocidade > 0){
+        console.log("Não é possivel pousar")
+    }
+    else{
+        console.log("Pousndo")
+        console.log("O avião pousou")
+    }
+}
